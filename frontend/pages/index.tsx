@@ -6,14 +6,11 @@ const Home: NextPage = () => {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Ego Sum</title>
-                <meta name="description" content="Lorem Ipsum"/>
+                <title>About me</title>
+                <meta name="description" content="A web app about me built with Next.js"/>
             </Head>
-
             <main className={styles.main}>
-                <h1 className={styles.title}>
-                    Hello World! <a href="https://nextjs.org">Next.js!</a>
-                </h1>
+                <p className={styles.description}>Welcome to the 90s.</p>
             </main>
         </div>
     )

@@ -1,16 +1,45 @@
+@font-face {
+    font-family: 'Paralines';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: local('Paralines'), url(/fonts/paralines.otf) format('opentype');
+}
+
+:root {
+    font-size: 1.6rem;
+
+    /*--color-text-dark: #202124;*/
+    --color-text-dark: #0a047a;
+    --color-text-light: #4C4C4C;
+    --color-text-bright: #FBFDFF;
+    --color-background-dark: #4babe0;
+    --color-background-light: #efeeea;
+    --color-background-bright: #FBFDFF;
+    --color-button-dark: #0a047a;
+    --color-button-bright: #FFFFFF;
+    --color-button-vibrant: #ff80ed;
+    --color-accent-one: #fec810;
+    --color-accent-two: #ff80ed;
+    --color-accent-three: #61fdf4;
+
+    --font-size-paragraph: 1.2rem;
+    --font-size-microcopy: 2.8rem;
+    --font-size-lower-title: 5.4rem;
+    --font-size-hero-title: 10rem;
+
+    --padding-desktop: 60px;
+    --padding-mobile: 28px;
+    --padding-paragraph: 16px;
+    --margin-s: 20px;
+    --margin-m: 48px;
+    --margin-l: 96px;
+}
+
 html,
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    padding: 0;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
 }
