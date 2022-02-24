@@ -28,8 +28,44 @@
     flex-grow: 1;
 }
 
+.titleOne {
+    font-family: var(--font-family-one);
+    font-size: var(--font-size-lower-title);
+}
+
+.titleTwo {
+    font-family: Bilbo, sans-serif;
+    font-size: var(--font-size-lower-title);
+}
+
+.titleThree {
+    font-family: var(--font-family-two);
+    font-size: var(--font-size-lower-title);
+}
+
 .description {
     color: var(--color-text-dark);
-    font-size: var(--font-size-hero-title);
-    font-family: Paralines, cursive;
+    font-size: var(--font-size-paragraph);
+    font-family: var(--font-family-one);
+    margin-bottom: var(--margin-m);
 }
+
+.descriptionTwo {
+    color: var(--color-text-dark);
+    font-size: var(--font-size-paragraph);
+    font-family: Assistant, sans-serif;
+    margin-bottom: var(--margin-m);
+}
+
+.descriptionThree {
+    color: var(--color-text-dark);
+    font-size: var(--font-size-paragraph);
+    font-family: Work Sans, sans-serif;
+}
+
+.emphasis {
+    font-family: var(--font-family-two);
+    font-size: 2rem;
+    color: var(--color-accent-two);
+}
+
