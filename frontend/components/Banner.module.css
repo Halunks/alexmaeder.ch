@@ -18,12 +18,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px;
+    padding: 15px;
 }
 
 .bannerText {
     font-family: var(--font-family-one);
     font-size: var(--font-size-paragraph);
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .bannerBtn {
@@ -35,6 +37,8 @@
 .bannerBtnText {
     font-family: var(--font-family-one);
     font-size: var(--font-size-paragraph);
+    text-transform: uppercase;
+    font-weight: 500;
 }
 
 .bannerIcon {

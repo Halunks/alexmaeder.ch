@@ -24,16 +24,22 @@
     --color-text-darkest: #202124;
     --color-text-dark: #0a047a;
     --color-text-light: #4C4C4C;
+    --color-text-lighter: #efeeea;
     --color-text-bright: #FBFDFF;
+
     --color-background-dark: #2b6aff;
     --color-background-light: #efeeea;
     --color-background-bright: #FBFDFF;
+
     --color-button-dark: #0a047a;
+    --color-button-hover: #efeeea;
     --color-button-bright: #FFFFFF;
     --color-button-vibrant: #ff80ed;
+
     --color-accent-one: #fec810;
     --color-accent-two: #ff80ed;
     --color-accent-three: #61fdf4;
+
     --color-borders-bright: 4px solid #efeeea;
     --color-borders-dark: 4px solid #202124;
 
@@ -43,7 +49,7 @@
     --font-size-upper-title: 8.32rem;
     --font-size-hero-title: 12.8rem;
 
-    --border-radius-button: 4px; /* 50% for circle */
+    --border-radius-button: 2px;
 
     --padding-desktop: 60px;
     --padding-mobile: 28px;
@@ -58,9 +64,12 @@
 
 html,
 body {
+    overflow: hidden;
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-size: 1.92rem;
+    color: var(--color-text-bright);
+    font-family: var(--font-family-one), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
