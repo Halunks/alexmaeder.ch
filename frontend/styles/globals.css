@@ -34,6 +34,8 @@
     --color-accent-one: #fec810;
     --color-accent-two: #ff80ed;
     --color-accent-three: #61fdf4;
+    --color-borders-bright: 4px solid #efeeea;
+    --color-borders-dark: 4px solid #202124;
 
     --font-size-paragraph: 1.92rem;
     --font-size-microcopy: 2.8rem;
@@ -52,8 +54,6 @@
 
     --font-family-one: Istok Web, sans-serif;
     --font-family-two: Kavivanar, sans-serif;
-
-    --screen-width-break: 800px;
 }
 
 html,
