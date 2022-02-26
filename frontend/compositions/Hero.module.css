@@ -1,0 +1,67 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: var(--padding-desktop);
+    z-index: 10;
+    height: 100vh;
+}
+
+.preTitle {
+    font-size: var(--font-size-microcopy);
+    color: var(--color-accent-two);
+    font-family: var(--font-family-two);
+    align-self: flex-start;
+    padding-left: 10px;
+}
+
+.titleHero {
+    font-size: var(--font-size-hero-title);
+    color: var(--color-text-darkest);
+    text-align: left;
+    line-height: 1;
+    font-weight: bolder;
+}
+
+.buttonHero {
+    background-color: var(--color-button-vibrant);
+    border-radius: var(--border-radius-button);
+    padding: 12px 50px;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 40px;
+    color: var(--color-text-darkest);
+    align-self: flex-end;
+    position: absolute;
+    bottom: 80px;
+    right: 80px;
+
+}
+
+.buttonHero:hover {
+    background-color: var(--color-button-dark);
+    color: var(--color-text-lighter);
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1000px) {
+    .titleHero {
+        font-size: 7rem;
+
+    }
+
+    .preTitle {
+        padding-left: 0;
+    }
+
+    .section {
+        padding: 50px 12px 12px;
+    }
+
+    .buttonHero {
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+    }
+}

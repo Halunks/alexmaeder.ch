@@ -1,45 +1,91 @@
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
+
+/*@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');*/
+
+/*@font-face {
     font-family: 'Paralines';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: local('Paralines'), url(/fonts/paralines.otf) format('opentype');
-}
+}*/
 
 :root {
-    font-size: 1.6rem;
+    font-size: 62.5%; /* 1.6 rem = 16px*/
 
-    /*--color-text-dark: #202124;*/
+    --color-text-darkest: #202124;
     --color-text-dark: #0a047a;
     --color-text-light: #4C4C4C;
+    --color-text-lighter: #efeeea;
     --color-text-bright: #FBFDFF;
-    --color-background-dark: #4babe0;
+
+    --color-background-dark: #2b6aff;
     --color-background-light: #efeeea;
     --color-background-bright: #FBFDFF;
-    --color-button-dark: #0a047a;
-    --color-button-bright: #FFFFFF;
+
+    --color-button-dark: #202124;
+    --color-button-hover: #efeeea;
+    --color-button-bright: #efeeea;
     --color-button-vibrant: #ff80ed;
+
     --color-accent-one: #fec810;
     --color-accent-two: #ff80ed;
     --color-accent-three: #61fdf4;
 
-    --font-size-paragraph: 1.2rem;
+    --color-borders-bright: 4px solid #efeeea;
+    --color-borders-dark: 4px solid #202124;
+
+    --font-size-paragraph: 1.92rem;
     --font-size-microcopy: 2.8rem;
-    --font-size-lower-title: 5.4rem;
-    --font-size-hero-title: 10rem;
+    --font-size-lower-title: 4.48rem;
+    --font-size-upper-title: 8.32rem;
+    --font-size-hero-title: 12.8rem;
+
+    --border-radius-button: 2px;
 
     --padding-desktop: 60px;
     --padding-mobile: 28px;
     --padding-paragraph: 16px;
+    --padding-button: 12px 50px;
     --margin-s: 20px;
     --margin-m: 48px;
     --margin-l: 96px;
+
+    /*--font-family-one: Istok Web, sans-serif;*/
+    --font-family-one: Assistant, sans-serif;
+    --font-family-two: Monoton, sans-serif;
 }
 
 html,
 body {
     padding: 0;
     margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    font-size: 1.92rem;
+    color: var(--color-text-bright);
+    font-family: var(--font-family-one), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    display: none;
+}
+
+span {
+    font-family: var(--font-family-two);
+    font-size: 2rem;
+    color: var(--color-accent-two);
 }
