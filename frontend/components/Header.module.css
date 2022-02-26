@@ -16,6 +16,9 @@
     justify-content: flex-end;
 }
 
+.microcopy {
+    color: var(--color-text-darkest)
+}
 
 .logoDesktop {
     width: 33%;
@@ -29,7 +32,7 @@
     font-weight: 600;
     font-size: 25px;
     margin-left: 18px;
-    color: var(--color-text-lighter);
+    color: var(--color-text-darkest);
 
 }
 
@@ -39,6 +42,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--color-text-darkest);
 }
 
 .button {
@@ -55,19 +59,19 @@
 }
 
 .button:hover {
-    background-color: var(--color-button-hover);
+    background-color: var(--color-button-dark);
     cursor: pointer;
-    color: var(--color-text-darkest);
+    color: var(--color-text-lighter);
 }
 
 .external {
-    background-color: var(--color-background-light);
+    background-color: var(--color-button-dark);
     border-radius: var(--border-radius-button);
-    color: var(--color-text-darkest);
+    color: var(--color-text-lighter);
     padding: 12px 50px;
     margin-left: 12px;
     cursor: pointer;
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
 }
 
 .external:hover {
@@ -84,6 +88,7 @@
     font-weight: 600;
     font-size: 25px;
     margin-left: 18px;
+    color: var(--color-text-darkest);
 }
 
 .menuIcon {
@@ -91,11 +96,20 @@
     align-self: baseline;
     justify-content: flex-end;
     font-size: 35px;
+    color: var(--color-text-darkest);
+}
+
+.menuIconExpand {
+    display: flex;
+    align-self: baseline;
+    justify-content: flex-end;
+    font-size: 35px;
+    color: var(--color-text-lighter);
 }
 
 .navMobile {
-    background-color: var(--color-background-light);
-    color: var(--color-text-darkest);
+    background-color: var(--color-button-dark);
+    color: var(--color-text-lighter);
     z-index: 25;
     height: 100vh;
     width: 100%;
@@ -113,8 +127,8 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-end;
-    padding-top: 50px;
-    color: var(--color-text-darkest);
+    padding-top: 70px;
+    color: var(--color-text-lighter);
 }
 
 .navMobileList > li {
@@ -136,11 +150,10 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
-    /*align-items: center;*/
 }
 
 .nametagMobileExpand {
-    color: var(--color-text-darkest);
+    color: var(--color-text-lighter);
     font-weight: 600;
     font-size: 25px;
     margin-left: 18px;
@@ -161,4 +174,7 @@
     background-repeat: repeat;
     z-index: 26;
     pointer-events: none;
+}
+
+.logoMobileExpand {
 }

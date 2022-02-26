@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
 
-/*@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
+/*@import url('https://fonts.googleapis.com/css2?family=Istok+Web:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kavivanar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Marck+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Assistant:wght@200;300;400;500;600;700;800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bilbo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carattere&display=swap');*/
@@ -31,9 +31,9 @@
     --color-background-light: #efeeea;
     --color-background-bright: #FBFDFF;
 
-    --color-button-dark: #0a047a;
+    --color-button-dark: #202124;
     --color-button-hover: #efeeea;
-    --color-button-bright: #FFFFFF;
+    --color-button-bright: #efeeea;
     --color-button-vibrant: #ff80ed;
 
     --color-accent-one: #fec810;
@@ -54,23 +54,34 @@
     --padding-desktop: 60px;
     --padding-mobile: 28px;
     --padding-paragraph: 16px;
+    --padding-button: 12px 50px;
     --margin-s: 20px;
     --margin-m: 48px;
     --margin-l: 96px;
 
-    --font-family-one: Istok Web, sans-serif;
-    --font-family-two: Kavivanar, sans-serif;
+    /*--font-family-one: Istok Web, sans-serif;*/
+    --font-family-one: Assistant, sans-serif;
+    --font-family-two: Monoton, sans-serif;
 }
 
 html,
 body {
-    overflow: hidden;
     padding: 0;
     margin: 0;
     font-size: 1.92rem;
     color: var(--color-text-bright);
     font-family: var(--font-family-one), -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+html {
+    -ms-overflow-style: none; /* Internet Explorer 10+ */
+    scrollbar-width: none; /* Firefox */
+}
+
+::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    display: none;
 }
 
 span {

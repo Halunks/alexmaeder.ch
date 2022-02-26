@@ -30,7 +30,7 @@ export default function Header() {
                 <Fragment>
                     <div className={styles.logoMobile}>
                         <Link href="/" passHref>
-                            <Image src="/logos/logo.svg"
+                            <Image src="/logos/logoDark.svg"
                                    alt="A Logo of Pinocchio"
                                    height={40}
                                    width={40}
@@ -48,7 +48,7 @@ export default function Header() {
                                     <div className={styles.nametagWrapper}>
                                         <div className={styles.logoMobileExpand}>
                                             <Link href="/" passHref>
-                                                <Image src="/logos/logoDark.svg"
+                                                <Image src="/logos/logo.svg"
                                                        alt="A Logo of Pinocchio in black"
                                                        height={40}
                                                        width={40}
@@ -59,7 +59,7 @@ export default function Header() {
                                             <div className={styles.nametagMobileExpand}>alexmaeder.ch</div>
                                         </Link>
                                     </div>
-                                    <div className={styles.menuIcon} onClick={() => setIsMenuExpanded(false)}>
+                                    <div className={styles.menuIconExpand} onClick={() => setIsMenuExpanded(false)}>
                                         <RiMenuUnfoldLine/>
                                     </div>
                                 </div>
@@ -88,7 +88,7 @@ export default function Header() {
                 <Fragment>
                     <div className={styles.logoDesktop}>
                         <Link href="/" passHref>
-                            <Image src="/logos/logo.svg"
+                            <Image src="/logos/logoDark.svg"
                                    alt="A Logo of Pinocchio"
                                    height={50}
                                    width={50}
