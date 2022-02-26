@@ -71,7 +71,8 @@
 }
 
 .external:hover {
-    background-color: var(--color-background-bright);
+    background-color: var(--color-button-vibrant);
+    color: var(--color-text-darkest);
 }
 
 .logoMobile {
