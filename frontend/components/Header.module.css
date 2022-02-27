@@ -6,6 +6,7 @@
     justify-content: space-between;
     padding: var(--padding-mobile);
     z-index: 20;
+
 }
 
 .navigation {
@@ -14,6 +15,7 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
 }
 
 .microcopy {
@@ -29,7 +31,7 @@
 }
 
 .nametagDesktop {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
     margin-left: 18px;
     color: var(--color-text-darkest);
@@ -85,7 +87,7 @@
 }
 
 .nametagMobile {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
     margin-left: 18px;
     color: var(--color-text-darkest);
@@ -111,7 +113,7 @@
     background-color: var(--color-button-dark);
     color: var(--color-text-lighter);
     z-index: 25;
-    height: 100vh;
+    height: 113vh;
     width: 100%;
     position: absolute;
     top: 0;
@@ -132,8 +134,10 @@
 }
 
 .navMobileList > li {
-    margin-right: 50px;
+    margin-right: 28px;
     margin-bottom: 30px;
+    font-size: var(--font-size-upper-title);
+    font-weight: var(--font-weight-upper-title);
 }
 
 .logoWrapper {
@@ -154,7 +158,7 @@
 
 .nametagMobileExpand {
     color: var(--color-text-lighter);
-    font-weight: 600;
+    font-weight: 700;
     font-size: 25px;
     margin-left: 18px;
 }

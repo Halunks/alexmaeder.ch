@@ -24,6 +24,14 @@ export default function Header() {
 
     const isMobile = windowDimension <= 800;
 
+    useEffect(() => {
+        const onScroll = () => setIsMenuExpanded(false)
+
+        window.removeEventListener("scroll", onScroll);
+        window.addEventListener("scroll", onScroll, {passive: true});
+        return () => window.removeEventListener("scroll", onScroll)
+    }, []);
+
     return (
         <header className={styles.container}>
             {isMobile ? (
@@ -49,7 +57,7 @@ export default function Header() {
                                         <div className={styles.logoMobileExpand}>
                                             <Link href="/" passHref>
                                                 <Image src="/logos/logo.svg"
-                                                       alt="A Logo of Pinocchio in black"
+                                                       alt="A Logo of Pinocchio"
                                                        height={40}
                                                        width={40}
                                                 />
