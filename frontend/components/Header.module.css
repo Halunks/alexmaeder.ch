@@ -5,6 +5,8 @@
     align-items: center;
     justify-content: space-between;
     padding: var(--padding-mobile);
+    padding-left: var(--padding-desktop);
+    padding-right: var(--padding-desktop);
     z-index: 20;
 
 }
@@ -58,6 +60,12 @@
     .button {
         padding: 12px 20px
     }
+
+    .container {
+
+        padding: var(--padding-mobile);
+    }
+
 }
 
 .button:hover {

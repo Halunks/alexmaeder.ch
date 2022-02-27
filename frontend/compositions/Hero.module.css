@@ -5,7 +5,8 @@
     align-items: center;
     padding: var(--padding-desktop);
     z-index: 10;
-    height: 100vh;
+    min-height: 90vh;
+    height: 100%;
 }
 
 .preTitle {
@@ -28,14 +29,11 @@
     background-color: var(--color-button-vibrant);
     border-radius: var(--border-radius-button);
     padding: 12px 50px;
-    margin-right: 25px;
     margin-left: 25px;
     margin-top: 40px;
     color: var(--color-text-darkest);
     align-self: flex-end;
-    position: absolute;
-    bottom: 80px;
-    right: 80px;
+    position: relative;
 
 }
 
@@ -56,12 +54,15 @@
     }
 
     .section {
-        padding: 50px 28px 28px;
+        padding: 36px 28px 28px;
     }
 
     .buttonHero {
-        position: absolute;
-        bottom: 50px;
-        right: 50px;
+        padding: 12px 50px;
+        margin: 60px 0 0;
+        position: relative;
+        align-self: center;
+        bottom: 0;
+        right: 0;
     }
 }

@@ -9,11 +9,11 @@ export default function Pictures() {
         <section className={styles.section}>
             <div className={styles.titleContainer}>
                 <h2 className={styles.title}>
-                    Author
+                    Lorem
                 </h2>
                 <Link href="https://www.instagram.com/evenmader/" passHref={true}>
                     <div className={styles.linkWrapper}>
-                        <div className={styles.link}>All Pictures</div>
+                        <div className={styles.link}>Ipsum Dolor</div>
                         <div className={styles.icon}>
                             <BsArrowUpRight/>
                         </div>
