@@ -12,10 +12,13 @@ export default function Pictures() {
                     Lorem
                 </h2>
                 <Link href="https://www.instagram.com/evenmader/" passHref={true}>
-                    <div className={styles.linkWrapper}>
-                        <div className={styles.link}>Ipsum Dolor</div>
-                        <div className={styles.icon}>
-                            <BsArrowUpRight/>
+                    <div className={styles.linkWrapperWrapper}>
+
+                        <div className={styles.linkWrapper}>
+                            <div className={styles.link}>Ipsum Dolor</div>
+                            <div className={styles.icon}>
+                                <BsArrowUpRight/>
+                            </div>
                         </div>
                     </div>
                 </Link>

@@ -115,10 +115,12 @@ export default function Header() {
                         </Link>
                     </div>
                     <nav className={styles.navigation}>
-                        <div className={styles.microcopy}>Lorem Ipsum?</div>
-                        <Link href="https://google.com" passHref={true}>
-                            <div className={styles.external}>Ipsum</div>
-                        </Link>
+                        <div className={styles.microcopy}><span>Lorem Ipsum?</span></div>
+                        <div className={styles.externalWrapper}>
+                            <Link href="https://google.com" passHref={true}>
+                                <div className={styles.external}>Ipsum</div>
+                            </Link>
+                        </div>
                     </nav>
                 </Fragment>
             )
