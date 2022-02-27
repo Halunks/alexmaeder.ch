@@ -21,7 +21,8 @@
 }
 
 .microcopy {
-    color: var(--color-text-darkest)
+    color: var(--color-text-darkest);
+    margin-right: 12px;
 }
 
 .logoDesktop {
@@ -33,7 +34,7 @@
 }
 
 .nametagDesktop {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     margin-left: 18px;
     color: var(--color-text-darkest);
@@ -74,19 +75,28 @@
     color: var(--color-text-lighter);
 }
 
+.externalWrapper {
+    border-radius: var(--border-radius-button);
+    box-shadow: inset 0 0 0 2px var(--color-button-dark);
+}
+
 .external {
     background-color: var(--color-button-dark);
     border-radius: var(--border-radius-button);
     color: var(--color-text-lighter);
     padding: 12px 50px;
-    margin-left: 12px;
     cursor: pointer;
-    /*text-transform: uppercase;*/
 }
 
 .external:hover {
-    background-color: var(--color-button-vibrant);
-    color: var(--color-text-darkest);
+    cursor: pointer;
+    -webkit-transform: translate(4px, -4px);
+    -ms-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
 }
 
 .logoMobile {
@@ -95,7 +105,8 @@
 }
 
 .nametagMobile {
-    font-weight: 700;
+    font-weight: 600;
+    padding-top: 4px;
     font-size: 25px;
     margin-left: 18px;
     color: var(--color-text-darkest);
@@ -144,7 +155,7 @@
 .navMobileList > li {
     margin-right: 28px;
     margin-bottom: 30px;
-    font-size: var(--font-size-upper-title);
+    font-size: 6rem;
     font-weight: var(--font-weight-upper-title);
 }
 
@@ -166,7 +177,8 @@
 
 .nametagMobileExpand {
     color: var(--color-text-lighter);
-    font-weight: 700;
+    font-weight: 600;
+    padding-top: 4px;
     font-size: 25px;
     margin-left: 18px;
 }
