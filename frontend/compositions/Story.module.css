@@ -1,0 +1,29 @@
+.section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    color: var(--color-text-darkest);
+    padding: var(--padding-desktop);
+}
+
+.title {
+    font-size: var(--font-size-upper-title);
+    font-weight: var(--font-weight-upper-title);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.blockWrapper {
+    display: flex;
+    height: 100%;
+    width: 100%;
+
+}

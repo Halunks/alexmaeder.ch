@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import profilePic from '../public/images/alex-maeder.jpg'
 import {BsArrowUpRight} from "react-icons/bs";
+import Card from "../components/Card";
 
 export default function Pictures() {
     return (
@@ -24,6 +25,12 @@ export default function Pictures() {
                 </Link>
             </div>
             <div className={styles.cardContainer}>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
+                <Card/>
                 <div className={styles.imageCard}>
                     <div className={styles.imageWrapper}>
                         <Image

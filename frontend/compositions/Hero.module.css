@@ -13,14 +13,13 @@
     font-size: var(--font-size-lower-title);
     color: var(--color-accent-one);
     font-family: var(--font-family-two);
-    align-self: flex-start;
-    padding-left: 10px;
+    align-self: center;
 }
 
 .titleHero {
     font-size: var(--font-size-hero-title);
     color: var(--color-text-darkest);
-    text-align: left;
+    text-align: center;
     line-height: 1;
     font-weight: var(--font-weight-upper-title);
 }
