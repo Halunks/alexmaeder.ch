@@ -50,11 +50,23 @@
     color: var(--color-text-darkest);
 }
 
+.btnWrapper {
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
 .button {
     border-radius: var(--border-radius-button);
     padding: 12px 50px;
-    margin-right: 25px;
-    margin-left: 25px;
+    background-color: var(--color-button-dark);
+    color: var(--color-text-lighter);
+
+    -webkit-transform: translate(4px, -4px);
+    -ms-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
 }
 
 @media only screen and (max-width: 1000px) {
@@ -73,6 +85,25 @@
     background-color: var(--color-button-dark);
     cursor: pointer;
     color: var(--color-text-lighter);
+
+    -webkit-transform: translate(4px, -4px);
+    -ms-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+}
+
+.button:active:hover {
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
+}
+
+.btnWrapper {
+    border-radius: var(--border-radius-button);
+    box-shadow: inset 0 0 0 2px var(--color-button-dark);
 }
 
 .externalWrapper {
@@ -86,14 +117,19 @@
     color: var(--color-text-lighter);
     padding: 12px 50px;
     cursor: pointer;
-}
-
-.external:hover {
-    cursor: pointer;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+}
 
+.external:active:hover {
+    cursor: pointer;
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
     -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);

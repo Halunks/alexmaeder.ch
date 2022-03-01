@@ -46,8 +46,8 @@
     --color-button-vibrant: #0a047a;
     --color-button-vibrant-two: #ff80ed;
 
-    --color-accent-one: goldenrod;
-    --color-accent-two: #ff80ed;
+    --color-accent-one: #ff80ed;
+    --color-accent-two: goldenrod;
     --color-accent-three: #61fdf4;
 
     --color-borders-bright: 2px solid #ff80ed;
@@ -55,8 +55,8 @@
 
     --font-size-paragraph: 1.92rem;
     --font-size-microcopy: 2.8rem;
-    --font-size-lower-title: 4.48rem;
-    --font-size-upper-title: 7rem;
+    --font-size-lower-title: 4rem;
+    --font-size-upper-title: 8rem;
     --font-size-hero-title: 12.8rem;
 
     --font-weight-upper-title: bolder;

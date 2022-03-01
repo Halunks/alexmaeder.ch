@@ -108,14 +108,18 @@ export default function Header() {
                     </div>
                     <div className={styles.btnContainer}>
                         <Link href="https://google.com" passHref={true}>
-                            <div className={styles.button}>Dolor</div>
+                            <div className={styles.btnWrapper}>
+                                <div className={styles.button}>Dolor</div>
+                            </div>
                         </Link>
                         <Link href="https://google.com" passHref={true}>
-                            <div className={styles.button}>Ipsum</div>
+                            <div className={styles.btnWrapper}>
+                                <div className={styles.button}>Ipsum</div>
+                            </div>
                         </Link>
                     </div>
                     <nav className={styles.navigation}>
-                        <div className={styles.microcopy}><span>Lorem Ipsum?</span></div>
+                        <div className={styles.microcopy}>Lorem Ipsum?</div>
                         <div className={styles.externalWrapper}>
                             <Link href="https://google.com" passHref={true}>
                                 <div className={styles.external}>Ipsum</div>

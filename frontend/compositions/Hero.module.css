@@ -13,14 +13,13 @@
     font-size: var(--font-size-lower-title);
     color: var(--color-accent-one);
     font-family: var(--font-family-two);
-    align-self: flex-start;
-    padding-left: 10px;
+    align-self: center;
 }
 
 .titleHero {
     font-size: var(--font-size-hero-title);
     color: var(--color-text-darkest);
-    text-align: left;
+    text-align: center;
     line-height: 1;
     font-weight: var(--font-weight-upper-title);
 }
@@ -39,15 +38,21 @@
     color: var(--color-text-lighter);
     align-self: center;
     position: relative;
-
-}
-
-.buttonHero:hover {
-    cursor: pointer;
-    cursor: pointer;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
+
+    webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+
+}
+
+.buttonHero:active:hover {
+    cursor: pointer;
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
 
     -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);
