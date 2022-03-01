@@ -1,11 +1,28 @@
 import styles from './Pictures.module.css'
 import Link from 'next/link'
-import Image from 'next/image'
-import profilePic from '../public/images/alex-maeder.jpg'
-import {BsArrowUpRight} from "react-icons/bs";
+import {BsArrowUpRight, BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
 import Card from "../components/Card";
+import useEmblaCarousel from "embla-carousel-react";
+import React, {useCallback, useEffect} from "react";
 
 export default function Pictures() {
+    const [emblaRef, emblaApi] = useEmblaCarousel({loop: false})
+
+    useEffect(() => {
+        if (emblaApi) {
+            //Embla API is ready
+        }
+        return scrollNext();
+    }, [emblaApi])
+
+    const scrollPrev = useCallback(() => {
+        if (emblaApi) emblaApi.scrollPrev()
+    }, [emblaApi])
+
+    const scrollNext = useCallback(() => {
+        if (emblaApi) emblaApi.scrollNext()
+    }, [emblaApi])
+
     return (
         <section className={styles.section}>
             <div className={styles.titleContainer}>
@@ -24,45 +41,22 @@ export default function Pictures() {
                     </div>
                 </Link>
             </div>
-            <div className={styles.cardContainer}>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <Card/>
-                <div className={styles.imageCard}>
-                    <div className={styles.imageWrapper}>
-                        <Image
-                            src={profilePic}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                    <div className={styles.imageTitle}>Lorem Ipsum</div>
-                    <p className={styles.imageDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                        debitis quos sint.</p>
+            <div className={styles.embla} ref={emblaRef}>
+                <div className={styles.emblaContainer}>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
+                    <Card/>
                 </div>
-                <div className={styles.imageCard}>
-                    <div className={styles.scndImageWrapper}>
-                        <Image
-                            src={profilePic}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                    <div className={styles.imageTitle}>Lorem Ipsum</div>
-                    <p className={styles.imageDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                        debitis quos sint.</p>
+            </div>
+            <div className={styles.slideBtnWrapper}>
+                <div className={styles.slideButtons}>
+                    <button className={styles.umblaPrev} onClick={scrollPrev}><BsFillArrowLeftCircleFill/></button>
                 </div>
-                <div className={styles.imageCard}>
-                    <div className={styles.thirdImageWrapper}>
-                        <Image
-                            src={profilePic}
-                            alt="Picture of the author"
-                        />
-                    </div>
-                    <div className={styles.imageTitle}>Lorem Ipsum</div>
-                    <p className={styles.imageDescription}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad
-                        debitis quos sint.</p>
+                <div className={styles.slideButtons}>
+                    <button className={styles.umblaNext} onClick={scrollNext}><BsFillArrowRightCircleFill/></button>
                 </div>
             </div>
         </section>

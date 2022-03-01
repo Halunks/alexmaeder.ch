@@ -38,15 +38,21 @@
     color: var(--color-text-lighter);
     align-self: center;
     position: relative;
-
-}
-
-.buttonHero:hover {
-    cursor: pointer;
-    cursor: pointer;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
+
+    webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+
+}
+
+.buttonHero:active:hover {
+    cursor: pointer;
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
 
     -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);

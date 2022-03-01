@@ -42,13 +42,19 @@
     align-items: center;
     height: 100%;
     align-self: center;
-}
-
-.linkWrapper:hover {
-    cursor: pointer;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
+    -webkit-transition: -webkit-transform .4s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+}
+
+.linkWrapper:active:hover {
+    cursor: pointer;
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
 
     -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);
@@ -66,65 +72,69 @@
     justify-content: center;
 }
 
-.cardContainer {
+.emblaContainer {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+}
+
+.embla {
+    overflow: hidden;
+    margin-top: 68px;
+    margin-bottom: 48px;
+}
+
+.slideBtnWrapper {
+    color: var(--color-text-lighter);
+    font-size: 60px;
+    margin-bottom: 64px;
+    display: flex;
+    align-self: center;
     justify-content: center;
 }
 
-.imageCard {
-    max-width: 330px;
-    min-width: 200px;
-    margin-right: 28px;
-    margin-left: 28px;
+.slideButtons {
+    margin: 16px;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: inset 0 0 0 2px var(--color-button-bright);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
 }
 
-.imageWrapper {
-    margin-top: 72px;
-    max-width: 330px;
-    background-color: var(--color-accent-one);
-    border-left: 8px solid var(--color-accent-one);
-    border-bottom: 4px solid var(--color-accent-one);
+.slideButtons > button {
+    display: flex;
+    z-index: 20;
+    -webkit-transform: translate(4px, -4px);
+    -ms-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1),
 }
 
-.scndImageWrapper {
-    margin-top: 72px;
-    max-width: 330px;
-    background-color: var(--color-accent-two);
-    border-left: 8px solid var(--color-accent-two);
-    border-bottom: 4px solid var(--color-accent-two);
+.slideButtons > button:hover {
+    -webkit-transform: translate(4px, -4px);
+    -ms-transform: translate(4px, -4px);
+    transform: translate(4px, -4px);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
 }
 
-.thirdImageWrapper {
-    margin-top: 72px;
-    max-width: 330px;
-    background-color: var(--color-accent-three);
-    border-left: 8px solid var(--color-accent-three);
-    border-bottom: 4px solid var(--color-accent-three);
-}
-
-.imageTitle {
-    font-size: var(--font-size-microcopy);
-    font-weight: var(--font-weight-upper-title);
-    margin-top: 24px;
-    margin-bottom: 12px;
+.slideButtons > button:active:hover {
+    -webkit-transform: translate(0px, -0px);
+    -ms-transform: translate(0px, -0px);
+    transform: translate(0px, -0px);
+    -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1);
+    transition: transform .2s cubic-bezier(.165, .84, .44, 1),
 }
 
 @media only screen and (max-width: 800px) {
     .section {
         padding: var(--padding-mobile);
-    }
-
-    .cardContainer {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding-top: 0;
-    }
-
-    .imageCard {
-        margin: 0 0 80px;
     }
 
     .titleContainer {

@@ -4,7 +4,7 @@ import defaultImage from '../public/images/alex-maeder.jpg'
 
 export default function Card() {
     return (
-        <div className={styles.sliderItem}>
+        <div className={styles.emblaSlide}>
             <div className={styles.card}>
                 <div className={styles.cardPhotoWrapper}>
                     <div className={styles.cardPhotoBg}/>
