@@ -72,13 +72,13 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <ul className={styles.navMobileList}>
-                                    <Link href="/lorem">
+                                    <Link href="/">
                                         <li>Lorem</li>
                                     </Link>
-                                    <Link href="/ipsum">
+                                    <Link href="/">
                                         <li>Ipsum</li>
                                     </Link>
-                                    <Link href="/dolor">
+                                    <Link href="/">
                                         <li>Dolor</li>
                                     </Link>
                                 </ul>
@@ -107,12 +107,12 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={styles.btnContainer}>
-                        <Link href="https://google.com" passHref={true}>
+                        <Link href="/" passHref={true}>
                             <div className={styles.btnWrapper}>
                                 <div className={styles.button}>Dolor</div>
                             </div>
                         </Link>
-                        <Link href="https://google.com" passHref={true}>
+                        <Link href="/" passHref={true}>
                             <div className={styles.btnWrapper}>
                                 <div className={styles.button}>Ipsum</div>
                             </div>
@@ -121,7 +121,7 @@ export default function Header() {
                     <nav className={styles.navigation}>
                         <div className={styles.microcopy}>Lorem Ipsum?</div>
                         <div className={styles.externalWrapper}>
-                            <Link href="https://google.com" passHref={true}>
+                            <Link href="/" passHref={true}>
                                 <div className={styles.external}>Ipsum</div>
                             </Link>
                         </div>

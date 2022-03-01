@@ -3,7 +3,6 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Hero from "../compositions/Hero";
 import Pictures from "../compositions/Pictures";
-import Story from "../compositions/Story";
 import Header from "../components/Header";
 
 const Home: NextPage = () => {
@@ -20,7 +19,7 @@ const Home: NextPage = () => {
                 <Header/>
                 <Hero/>
                 <Pictures/>
-                <Story/>
+                {/*<Story/>*/}
             </main>
         </div>
     )

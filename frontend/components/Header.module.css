@@ -83,7 +83,6 @@
 
 .button:hover {
     background-color: var(--color-button-dark);
-    cursor: pointer;
     color: var(--color-text-lighter);
 
     -webkit-transform: translate(4px, -4px);
@@ -116,7 +115,6 @@
     border-radius: var(--border-radius-button);
     color: var(--color-text-lighter);
     padding: 12px 50px;
-    cursor: pointer;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
@@ -126,7 +124,6 @@
 }
 
 .external:active:hover {
-    cursor: pointer;
     -webkit-transform: translate(0px, -0px);
     -ms-transform: translate(0px, -0px);
     transform: translate(0px, -0px);
