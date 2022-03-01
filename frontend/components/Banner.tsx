@@ -6,7 +6,7 @@ export default function Banner() {
     return (
         <div className={styles.banner}>
             <Link
-                href="https://nextjs.org"
+                href="/"
                 passHref={true}
             >
                 <div className={styles.bannerFlex}>
