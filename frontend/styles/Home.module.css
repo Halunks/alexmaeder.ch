@@ -3,7 +3,7 @@
     width: 100%;
     background-color: var(--color-background-light);
     z-index: 0;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .noise {
@@ -16,7 +16,7 @@
     top: 0;
     right: 0;
     bottom: 0;
-    height: 400vh;
+    height: 800vh;
     width: 100%;
     background-repeat: repeat;
     z-index: 2;

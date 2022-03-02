@@ -107,16 +107,16 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={styles.btnContainer}>
-                        <Link href="/" passHref={true}>
-                            <div className={styles.btnWrapper}>
-                                <div className={styles.button}>Dolor</div>
-                            </div>
-                        </Link>
-                        <Link href="/" passHref={true}>
-                            <div className={styles.btnWrapper}>
-                                <div className={styles.button}>Ipsum</div>
-                            </div>
-                        </Link>
+                        {/*<Link href="/" passHref={true}>*/}
+                        {/*    <div className={styles.btnWrapper}>*/}
+                        {/*        <div className={styles.button}>Dolor</div>*/}
+                        {/*    </div>*/}
+                        {/*</Link>*/}
+                        {/*<Link href="/" passHref={true}>*/}
+                        {/*    <div className={styles.btnWrapper}>*/}
+                        {/*        <div className={styles.button}>Ipsum</div>*/}
+                        {/*    </div>*/}
+                        {/*</Link>*/}
                     </div>
                     <nav className={styles.navigation}>
                         <div className={styles.microcopy}>Lorem Ipsum?</div>

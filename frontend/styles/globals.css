@@ -62,7 +62,7 @@
 
     --font-weight-upper-title: bolder;
 
-    --border-radius-button: 2px;
+    --border-radius-button: 30px;
 
     --padding-desktop: 60px;
     --padding-mobile: 28px;
@@ -89,6 +89,7 @@ body {
 html {
     -ms-overflow-style: none; /* Internet Explorer 10+ */
     scrollbar-width: none; /* Firefox */
+    scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
