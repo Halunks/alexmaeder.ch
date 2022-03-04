@@ -213,6 +213,10 @@
     -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
 }
 
 .stickyIlloWrapperVisible {

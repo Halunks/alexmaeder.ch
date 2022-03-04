@@ -13,14 +13,15 @@ interface storyProps {
 export default function Story() {
     const router = useRouter();
     const [whoIsActive, setWhoIsActive] = useState(1);
-    const refOne = useRef();
-    const refTwo = useRef();
-    const refThree = useRef();
-    const refFour = useRef();
+    const refOne = useRef<HTMLDivElement>(null);
+    const refTwo = useRef<HTMLDivElement>(null);
+    const refThree = useRef<HTMLDivElement>(null);
+    const refFour = useRef<HTMLDivElement>(null);
     const inViewportOne = useIntersection(refOne, '0px');
     const inViewportTwo = useIntersection(refTwo, '0px');
     const inViewportThree = useIntersection(refThree, '0px');
     const inViewportFour = useIntersection(refFour, '0px');
+    const [backgroundPicture, setBackgroundPicture] = useState({backgroundColor: "#0a047a"})
 
     useEffect(() => {
         if (inViewportOne) {
@@ -34,6 +35,20 @@ export default function Story() {
         }
         if (inViewportFour) {
             setWhoIsActive(4);
+        }
+
+        switch (whoIsActive) {
+            case 1:
+                return setBackgroundPicture({backgroundColor: "#0a047a"});
+            case 2:
+                return setBackgroundPicture({backgroundColor: "#ff80ed"});
+            case 3:
+                return setBackgroundPicture({backgroundColor: "#fec810"});
+            case 4:
+                return setBackgroundPicture({backgroundColor: "#2b6aff"});
+            default:
+                return setBackgroundPicture({backgroundColor: "#0a047a"})
+
         }
     }, [inViewportOne, inViewportTwo, inViewportThree, inViewportFour]);
 
@@ -115,122 +130,19 @@ export default function Story() {
                         </div>
                         <div className={styles.posRelTwo}>
                             <div className={styles.stickyContent}>
-                                {whoIsActive === 1 ? (
-                                    <div className={styles.stickyIlloWrapperVisible}
-                                         style={{backgroundColor: "#0a047a"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
+                                <div className={styles.stickyIlloWrapper}
+                                     style={backgroundPicture}>
+                                    <div className={styles.noiseOverlay}/>
+                                    <div className={styles.stickyIllo}>
+                                        <div className={styles.reduceMotion}>
+                                            <Image
+                                                src={defaultImage}
+                                                alt="default image"
+                                                className={styles.illoImage}
+                                            />
                                         </div>
                                     </div>
-                                ) : (
-                                    <div className={styles.stickyIlloWrapperHidden}
-                                         style={{backgroundColor: "#0a047a"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                                {whoIsActive === 2 ? (
-                                    <div className={styles.stickyIlloWrapperVisible}
-                                         style={{backgroundColor: "#fec810"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className={styles.stickyIlloWrapperHidden}
-                                         style={{backgroundColor: "#0a047a"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                                {whoIsActive === 3 ? (
-                                    <div className={styles.stickyIlloWrapperVisible}
-                                         style={{backgroundColor: "#61fdf4"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className={styles.stickyIlloWrapperHidden}
-                                         style={{backgroundColor: "#0a047a"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
-                                {whoIsActive === 4 ? (
-                                    <div className={styles.stickyIlloWrapperVisible}
-                                         style={{backgroundColor: "#ff80ed"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                ) : (
-                                    <div className={styles.stickyIlloWrapperHidden}
-                                         style={{backgroundColor: "#0a047a"}}>
-                                        <div className={styles.noiseOverlay}/>
-                                        <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={defaultImage}
-                                                    alt="default image"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
-                                        </div>
-                                    </div>
-                                )}
+                                </div>
                             </div>
                         </div>
                     </div>
