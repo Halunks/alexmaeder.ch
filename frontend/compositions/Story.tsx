@@ -1,5 +1,5 @@
 import styles from './Story.module.css'
-import defaultImage from '../public/images/default.png'
+import defaultImage from '../public/images/default-design.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import {useRouter} from "next/router";
@@ -115,18 +115,122 @@ export default function Story() {
                         </div>
                         <div className={styles.posRelTwo}>
                             <div className={styles.stickyContent}>
-                                <div className={styles.stickyIlloWrapper}>
-                                    <div className={styles.noiseOverlay}/>
-                                    <div className={styles.stickyIllo}>
-                                        <div className={styles.reduceMotion}>
-                                            <Image
-                                                src={defaultImage}
-                                                alt="default image"
-                                                className={styles.illoImage}
-                                            />
+                                {whoIsActive === 1 ? (
+                                    <div className={styles.stickyIlloWrapperVisible}
+                                         style={{backgroundColor: "#0a047a"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+                                ) : (
+                                    <div className={styles.stickyIlloWrapperHidden}
+                                         style={{backgroundColor: "#0a047a"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                                {whoIsActive === 2 ? (
+                                    <div className={styles.stickyIlloWrapperVisible}
+                                         style={{backgroundColor: "#fec810"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className={styles.stickyIlloWrapperHidden}
+                                         style={{backgroundColor: "#0a047a"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                                {whoIsActive === 3 ? (
+                                    <div className={styles.stickyIlloWrapperVisible}
+                                         style={{backgroundColor: "#61fdf4"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className={styles.stickyIlloWrapperHidden}
+                                         style={{backgroundColor: "#0a047a"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
+                                {whoIsActive === 4 ? (
+                                    <div className={styles.stickyIlloWrapperVisible}
+                                         style={{backgroundColor: "#ff80ed"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                ) : (
+                                    <div className={styles.stickyIlloWrapperHidden}
+                                         style={{backgroundColor: "#0a047a"}}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={defaultImage}
+                                                    alt="default image"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
+                                        </div>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
