@@ -1,29 +1,363 @@
 .section {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: 100%;
+    padding-top: 120px;
+    position: relative;
+    padding-bottom: 120px;
     color: var(--color-text-darkest);
-    padding: var(--padding-desktop);
+    max-width: 100%;
+}
+
+.container {
+    width: 100%;
+    max-width: 2200px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 60px;
+    padding-left: 60px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.titleWrapper {
+    position: relative;
+    text-align: center;
+    z-index: 1;
 }
 
 .title {
+    word-break: break-word;
+    margin-bottom: 1em;
     font-size: var(--font-size-upper-title);
     font-weight: var(--font-weight-upper-title);
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+.storySection {
+    padding-top: 0;
+    padding-bottom: 120px;
 }
 
-.blockWrapper {
-    display: flex;
-    height: 100%;
-    width: 100%;
+.storyGrid {
+    display: -ms-grid;
+    display: grid;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    grid-auto-columns: 1fr;
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: auto;
+    grid-template-rows: auto;
+}
 
+.posRelOne {
+    padding-right: 2em;
+    position: relative;
+}
+
+.stickyNavWrapper {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 60px;
+    z-index: 22;
+    display: inline-block;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.stickyNav {
+    position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 4px 2px;
+    border-radius: var(--border-radius-button);
+    background-color: var(--color-button-dark);
+}
+
+.stickyNavLink {
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 2px;
+    padding: .8em 1.2em .7em;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    border-radius: var(--border-radius-button);
+    -webkit-transition: color .2s cubic-bezier(.165, .84, .44, 1), background-color .2s cubic-bezier(.165, .84, .44, 1);
+    transition: color .2s cubic-bezier(.165, .84, .44, 1), background-color .2s cubic-bezier(.165, .84, .44, 1);
+    color: var(--color-text-lighter);
+    line-height: 1;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.stickyNavLink:hover {
+    background-color: var(--color-button-bright);
+    color: var(--color-button-dark);
+}
+
+.stickyNavLinkActive {
+    composes: stickyNavLink;
+    background-color: var(--color-button-bright);
+    color: var(--color-button-dark);
+}
+
+.stickyNavOverlay {
+    background-color: var(--color-button-dark);
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: var(--border-radius-button);
+    background-image: linear-gradient(65deg, #0a047a, rgba(10, 4, 122, .5) 56%, hsla(0, 0%, 100%, 0));
+    opacity: .6;
+}
+
+.content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.contentBlock {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: start;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.contentTitle {
+    word-break: break-word;
+    font-size: var(--font-size-lower-title);
+    font-family: var(--font-family-two);
+    margin-bottom: .4em;
+}
+
+.posRelTwo {
+    position: relative;
+}
+
+.stickyContent {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 21;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: stretch;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    display: flex;
+    height: 100vh;
+    min-height: 600px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+}
+
+.stickyIlloWrapper {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+}
+
+.stickyIlloWrapperVisible {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 0.5s linear;
+}
+
+.stickyIlloWrapperHidden {
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 0.5s, opacity 0.5s linear;
+}
+
+.stickyIlloWrapper {
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+    -o-animation: fadeIn 1s;
+    -ms-animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.noiseOverlay {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background-image: url("../public/images/noise-transparent-intense.png");
+    background-position: 0 0;
+    background-size: 250px;
+    opacity: .65;
+}
+
+.stickyIllo {
+    opacity: 1;
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.reduceMotion {
+    /*display: none;*/
+}
+
+.illoImage {
+    left: 0;
+    top: auto;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+@media only screen and (max-width: 800px) {
+    .container {
+        padding-right: var(--padding-mobile);
+        padding-left: var(--padding-mobile);
+    }
+
+    .storGrid {
+        -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    }
+
+    .posRelOne {
+        padding-right: 0;
+    }
 }

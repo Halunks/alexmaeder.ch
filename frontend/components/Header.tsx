@@ -37,14 +37,14 @@ export default function Header() {
             {isMobile ? (
                 <Fragment>
                     <div className={styles.logoMobile}>
-                        <Link href="/" passHref>
+                        <Link href="/" passHref={true}>
                             <Image src="/logos/logoDark.svg"
                                    alt="A Logo of Pinocchio"
                                    height={40}
                                    width={40}
                             />
                         </Link>
-                        <Link href="/" passHref>
+                        <Link href="/" passHref={true}>
                             <div className={styles.nametagMobile}>alexmaeder.ch</div>
                         </Link>
                     </div>
@@ -55,7 +55,7 @@ export default function Header() {
                                 <div className={styles.logoWrapper}>
                                     <div className={styles.nametagWrapper}>
                                         <div className={styles.logoMobileExpand}>
-                                            <Link href="/" passHref>
+                                            <Link href="/" passHref={true}>
                                                 <Image src="/logos/logo.svg"
                                                        alt="A Logo of Pinocchio"
                                                        height={40}
@@ -63,7 +63,7 @@ export default function Header() {
                                                 />
                                             </Link>
                                         </div>
-                                        <Link href="/" passHref>
+                                        <Link href="/" passHref={true}>
                                             <div className={styles.nametagMobileExpand}>alexmaeder.ch</div>
                                         </Link>
                                     </div>
@@ -72,13 +72,13 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <ul className={styles.navMobileList}>
-                                    <Link href="/">
+                                    <Link href="/" passHref={true}>
                                         <li>Lorem</li>
                                     </Link>
-                                    <Link href="/">
+                                    <Link href="/" passHref={true}>
                                         <li>Ipsum</li>
                                     </Link>
-                                    <Link href="/">
+                                    <Link href="/" passHref={true}>
                                         <li>Dolor</li>
                                     </Link>
                                 </ul>
@@ -107,16 +107,16 @@ export default function Header() {
                         </Link>
                     </div>
                     <div className={styles.btnContainer}>
-                        <Link href="/" passHref={true}>
-                            <div className={styles.btnWrapper}>
-                                <div className={styles.button}>Dolor</div>
-                            </div>
-                        </Link>
-                        <Link href="/" passHref={true}>
-                            <div className={styles.btnWrapper}>
-                                <div className={styles.button}>Ipsum</div>
-                            </div>
-                        </Link>
+                        {/*<Link href="/" passHref={true}>*/}
+                        {/*    <div className={styles.btnWrapper}>*/}
+                        {/*        <div className={styles.button}>Dolor</div>*/}
+                        {/*    </div>*/}
+                        {/*</Link>*/}
+                        {/*<Link href="/" passHref={true}>*/}
+                        {/*    <div className={styles.btnWrapper}>*/}
+                        {/*        <div className={styles.button}>Ipsum</div>*/}
+                        {/*    </div>*/}
+                        {/*</Link>*/}
                     </div>
                     <nav className={styles.navigation}>
                         <div className={styles.microcopy}>Lorem Ipsum?</div>
