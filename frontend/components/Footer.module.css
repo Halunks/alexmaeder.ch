@@ -1,0 +1,40 @@
+.footerContainer {
+    padding: var(--padding-desktop);
+    color: var(--color-text-darkest);
+    height: 100%;
+    width: 100%;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    flex-direction: row;
+}
+
+.nametagMobile {
+    font-weight: 600;
+    padding-top: 4px;
+    font-size: 25px;
+    margin-left: 18px;
+    color: var(--color-text-darkest);
+}
+
+.linkContainer {
+    padding-top: 28px;
+}
+
+.linkContainer > div {
+    margin-bottom: 12px;
+}
+
+.credentialsContainer {
+    margin-top: 28px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .footerContainer {
+        padding: var(--padding-mobile);
+    }
+}
