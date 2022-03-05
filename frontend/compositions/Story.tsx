@@ -1,8 +1,10 @@
 import styles from './Story.module.css'
-import defaultImage from '../public/images/default-design.svg'
+import defaultImageOne from '../public/images/default-design.svg'
+import defaultImageTwo from '../public/images/default-two.svg'
+import defaultImageThree from '../public/images/default-three.svg'
+import defaultImageFour from '../public/images/default-four.svg'
 import Image from 'next/image'
 import Link from 'next/link'
-import {useRouter} from "next/router";
 import {useEffect, useRef, useState} from "react";
 import useIntersection from '../hooks/useIntersection'
 
@@ -11,7 +13,6 @@ interface storyProps {
 }
 
 export default function Story() {
-    const router = useRouter();
     const [whoIsActive, setWhoIsActive] = useState(1);
     const refOne = useRef<HTMLDivElement>(null);
     const refTwo = useRef<HTMLDivElement>(null);
@@ -21,7 +22,24 @@ export default function Story() {
     const inViewportTwo = useIntersection(refTwo, '0px');
     const inViewportThree = useIntersection(refThree, '0px');
     const inViewportFour = useIntersection(refFour, '0px');
-    const [backgroundPicture, setBackgroundPicture] = useState({backgroundColor: "#0a047a"})
+    const [backgroundCol, setBackgroundCol] = useState({backgroundColor: "#0a047a"})
+    const [backgroundImg, setBackgroundImg] = useState(defaultImageOne);
+    const [windowDimension, setWindowDimension] = useState(0);
+
+    useEffect(() => {
+        setWindowDimension(window.innerWidth);
+    }, []);
+
+    useEffect(() => {
+        function handleResize() {
+            setWindowDimension(window.innerWidth);
+        }
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
+    const isMobile = windowDimension <= 1000;
 
     useEffect(() => {
         if (inViewportOne) {
@@ -39,15 +57,20 @@ export default function Story() {
 
         switch (whoIsActive) {
             case 1:
-                return setBackgroundPicture({backgroundColor: "#0a047a"});
+                setBackgroundImg(defaultImageOne);
+                return setBackgroundCol({backgroundColor: "#0a047a"});
             case 2:
-                return setBackgroundPicture({backgroundColor: "#ff80ed"});
+                setBackgroundImg(defaultImageTwo);
+                return setBackgroundCol({backgroundColor: "#ff80ed"});
             case 3:
-                return setBackgroundPicture({backgroundColor: "#fec810"});
+                setBackgroundImg(defaultImageThree);
+                return setBackgroundCol({backgroundColor: "#fec810"});
             case 4:
-                return setBackgroundPicture({backgroundColor: "#2b6aff"});
+                setBackgroundImg(defaultImageFour);
+                return setBackgroundCol({backgroundColor: "#2b6aff"});
             default:
-                return setBackgroundPicture({backgroundColor: "#0a047a"})
+                setBackgroundImg(defaultImageOne)
+                return setBackgroundCol({backgroundColor: "#0a047a"})
 
         }
     }, [inViewportOne, inViewportTwo, inViewportThree, inViewportFour]);
@@ -66,30 +89,35 @@ export default function Story() {
                                     <Link href="#one" passHref={false}>
                                         <div
                                             className={whoIsActive === 1 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
-                                        >Lorem
+                                        >Act I
                                         </div>
                                     </Link>
                                     <Link href="#two" passHref={false}>
                                         <div
                                             className={whoIsActive === 2 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
-                                        >Lorem
+                                        >II
                                         </div>
                                     </Link>
                                     <Link href="#three" passHref={false}>
                                         <div
                                             className={whoIsActive === 3 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
-                                        >Lorem
+                                        >III
                                         </div>
                                     </Link>
                                     <Link href="#four" passHref={false}>
                                         <div
                                             className={whoIsActive === 4 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
-                                        >Lorem
+                                        >IV
                                         </div>
                                     </Link>
                                     <div className={styles.stickyNavOverlay}/>
                                 </nav>
                             </div>
+                            {isMobile ? (
+                                <div className={styles.mobileImageWrapperOne}>
+                                    <Image src={defaultImageOne}/>
+                                </div>
+                            ) : null}
                             <div
                                 id="one" className={styles.contentBlock}>
                                 <h3
@@ -99,6 +127,11 @@ export default function Story() {
                                     adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
                                     sit amet, consectetur adipisicing elit. Cupiditate, quam!</p>
                             </div>
+                            {isMobile ? (
+                                <div className={styles.mobileImageWrapperTwo}>
+                                    <Image src={defaultImageTwo}/>
+                                </div>
+                            ) : null}
                             <div
                                 id="two" className={styles.contentBlock}>
                                 <h3
@@ -108,6 +141,11 @@ export default function Story() {
                                     adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
                                     sit amet, consectetur adipisicing elit. Alias, atque.</p>
                             </div>
+                            {isMobile ? (
+                                <div className={styles.mobileImageWrapperThree}>
+                                    <Image src={defaultImageThree}/>
+                                </div>
+                            ) : null}
                             <div
                                 id="three" className={styles.contentBlock}>
                                 <h3
@@ -118,6 +156,11 @@ export default function Story() {
                                     sit amet, consectetur adipisicing elit. Eos itaque neque officiis quidem rerum
                                     temporibus?</p>
                             </div>
+                            {isMobile ? (
+                                <div className={styles.mobileImageWrapperFour}>
+                                    <Image src={defaultImageFour}/>
+                                </div>
+                            ) : null}
                             <div
                                 id="four" className={styles.contentBlock}>
                                 <h3
@@ -128,23 +171,24 @@ export default function Story() {
                                     sit amet.</p>
                             </div>
                         </div>
-                        <div className={styles.posRelTwo}>
-                            <div className={styles.stickyContent}>
-                                <div className={styles.stickyIlloWrapper}
-                                     style={backgroundPicture}>
-                                    <div className={styles.noiseOverlay}/>
-                                    <div className={styles.stickyIllo}>
-                                        <div className={styles.reduceMotion}>
-                                            <Image
-                                                src={defaultImage}
-                                                alt="default image"
-                                                className={styles.illoImage}
-                                            />
+                        {isMobile ? null : (
+                            <div className={styles.posRelTwo}>
+                                <div className={styles.stickyContent}>
+                                    <div className={styles.stickyIlloWrapper}
+                                         style={backgroundCol}>
+                                        <div className={styles.noiseOverlay}/>
+                                        <div className={styles.stickyIllo}>
+                                            <div className={styles.reduceMotion}>
+                                                <Image
+                                                    src={backgroundImg}
+                                                    alt="different shapes and sizes of abstract figures"
+                                                    className={styles.illoImage}
+                                                />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
+                            </div>)}
                     </div>
                 </div>
             </div>
