@@ -1,8 +1,8 @@
 import styles from './Story.module.css'
-import defaultImageOne from '../public/images/default-design.svg'
-import defaultImageTwo from '../public/images/default-two.svg'
-import defaultImageThree from '../public/images/default-three.svg'
-import defaultImageFour from '../public/images/default-four.svg'
+import defaultImageOne from '../public/images/memphis.svg'
+import defaultImageTwo from '../public/images/memphis.svg'
+import defaultImageThree from '../public/images/memphis.svg'
+import defaultImageFour from '../public/images/memphis.svg'
 import Image from 'next/image'
 import Link from 'next/link'
 import {useEffect, useRef, useState} from "react";
@@ -178,13 +178,11 @@ export default function Story() {
                                          style={backgroundCol}>
                                         <div className={styles.noiseOverlay}/>
                                         <div className={styles.stickyIllo}>
-                                            <div className={styles.reduceMotion}>
-                                                <Image
-                                                    src={backgroundImg}
-                                                    alt="different shapes and sizes of abstract figures"
-                                                    className={styles.illoImage}
-                                                />
-                                            </div>
+                                            <Image
+                                                src={backgroundImg}
+                                                alt="different shapes in memphis style"
+                                                className={styles.illoImage}
+                                            />
                                         </div>
                                     </div>
                                 </div>

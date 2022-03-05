@@ -324,17 +324,23 @@
 
 .stickyIllo {
     opacity: 1;
-    display: block;
+    align-items: center;
+    display: flex;
+    justify-content: center;
     position: absolute;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     overflow: hidden;
+
+    /*background-image: url("../public/images/test.svg");*/
+    /*background-repeat: repeat;*/
+    /*width: 1200px;*/
 }
 
 .reduceMotion {
-    /*display: none;*/
+
 }
 
 .illoImage {
