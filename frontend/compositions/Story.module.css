@@ -107,7 +107,7 @@
     text-transform: uppercase;
 }
 
-.stickyNavLink:active {
+.stickyNavLink:hover {
     background-color: var(--color-button-bright);
     color: var(--color-button-dark);
 }
