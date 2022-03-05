@@ -5,6 +5,8 @@ import Hero from "../compositions/Hero";
 import Pictures from "../compositions/Pictures";
 import Header from "../components/Header";
 import Story from "../compositions/Story";
+import Techstack from "../compositions/Techstack";
+import Footer from "../components/Footer";
 
 const Home: NextPage = () => {
     return (
@@ -21,6 +23,8 @@ const Home: NextPage = () => {
                 <Hero/>
                 <Pictures/>
                 <Story/>
+                <Techstack/>
+                <Footer/>
             </main>
         </div>
     )
