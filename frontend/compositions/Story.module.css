@@ -108,10 +108,6 @@
     text-transform: uppercase;
 }
 
-.stickyNavLink:hover {
-    background-color: var(--color-button-bright);
-    color: var(--color-button-dark);
-}
 
 .stickyNavLinkActive {
     composes: stickyNavLink;
@@ -421,5 +417,12 @@
 
     .stickyNavWrapper {
         top: 28px;
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .stickyNavLink:hover {
+        background-color: var(--color-button-bright);
+        color: var(--color-button-dark);
     }
 }

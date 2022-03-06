@@ -76,7 +76,7 @@ export default function Story() {
     }, [inViewportOne, inViewportTwo, inViewportThree, inViewportFour]);
 
     return (
-        <section className={styles.section}>
+        <section id="work" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.titleWrapper}>
                     <h2 className={styles.title}><span>Lorem Ipsum</span><br/> Dolor Lorem Ipsum?</h2>
@@ -86,25 +86,25 @@ export default function Story() {
                         <div className={styles.posRelOne}>
                             <div className={styles.stickyNavWrapper}>
                                 <nav className={styles.stickyNav}>
-                                    <Link href="#one" passHref={false}>
+                                    <Link href="#one" passHref={true}>
                                         <div
                                             className={whoIsActive === 1 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
                                         >Act I
                                         </div>
                                     </Link>
-                                    <Link href="#two" passHref={false}>
+                                    <Link href="#two" passHref={true}>
                                         <div
                                             className={whoIsActive === 2 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
                                         >II
                                         </div>
                                     </Link>
-                                    <Link href="#three" passHref={false}>
+                                    <Link href="#three" passHref={true}>
                                         <div
                                             className={whoIsActive === 3 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
                                         >III
                                         </div>
                                     </Link>
-                                    <Link href="#four" passHref={false}>
+                                    <Link href="#four" passHref={true}>
                                         <div
                                             className={whoIsActive === 4 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
                                         >IV
@@ -114,12 +114,12 @@ export default function Story() {
                                 </nav>
                             </div>
                             {isMobile ? (
-                                <div className={styles.mobileImageWrapperOne}>
+                                <div id="one" className={styles.mobileImageWrapperOne}>
                                     <Image src={defaultImageOne}/>
                                 </div>
                             ) : null}
-                            <div
-                                id="one" className={styles.contentBlock}>
+                            <div id="one"
+                                 className={styles.contentBlock}>
                                 <h3
                                     ref={refOne}
                                     className={styles.contentTitle}>Ipsum Lorem</h3>
@@ -128,12 +128,12 @@ export default function Story() {
                                     sit amet, consectetur adipisicing elit. Cupiditate, quam!</p>
                             </div>
                             {isMobile ? (
-                                <div className={styles.mobileImageWrapperTwo}>
+                                <div id="two" className={styles.mobileImageWrapperTwo}>
                                     <Image src={defaultImageTwo}/>
                                 </div>
                             ) : null}
-                            <div
-                                id="two" className={styles.contentBlock}>
+                            <div id="two"
+                                 className={styles.contentBlock}>
                                 <h3
                                     ref={refTwo}
                                     className={styles.contentTitle}>Ipsum Lorem</h3>
@@ -142,12 +142,12 @@ export default function Story() {
                                     sit amet, consectetur adipisicing elit. Alias, atque.</p>
                             </div>
                             {isMobile ? (
-                                <div className={styles.mobileImageWrapperThree}>
+                                <div id="three" className={styles.mobileImageWrapperThree}>
                                     <Image src={defaultImageThree}/>
                                 </div>
                             ) : null}
-                            <div
-                                id="three" className={styles.contentBlock}>
+                            <div id="three"
+                                 className={styles.contentBlock}>
                                 <h3
                                     ref={refThree}
                                     className={styles.contentTitle}>Ipsum Lorem</h3>
@@ -157,12 +157,12 @@ export default function Story() {
                                     temporibus?</p>
                             </div>
                             {isMobile ? (
-                                <div className={styles.mobileImageWrapperFour}>
+                                <div id="four" className={styles.mobileImageWrapperFour}>
                                     <Image src={defaultImageFour}/>
                                 </div>
                             ) : null}
-                            <div
-                                id="four" className={styles.contentBlock}>
+                            <div id="four"
+                                 className={styles.contentBlock}>
                                 <h3
                                     ref={refFour}
                                     className={styles.contentTitle}>Ipsum Lorem</h3>

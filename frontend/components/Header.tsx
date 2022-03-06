@@ -39,7 +39,7 @@ export default function Header() {
                     <div className={styles.logoMobile}>
                         <Link href="/" passHref={true}>
                             <Image src="/logos/logoDark.svg"
-                                   alt="A Logo of Pinocchio"
+                                   alt="A Logo of pinocchio"
                                    height={40}
                                    width={40}
                             />
@@ -57,7 +57,7 @@ export default function Header() {
                                         <div className={styles.logoMobileExpand}>
                                             <Link href="/" passHref={true}>
                                                 <Image src="/logos/logo.svg"
-                                                       alt="A Logo of Pinocchio"
+                                                       alt="A Logo of pinocchio"
                                                        height={40}
                                                        width={40}
                                                 />
@@ -72,14 +72,14 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <ul className={styles.navMobileList}>
-                                    <Link href="/" passHref={true}>
-                                        <li>Lorem</li>
+                                    <Link href="/#impressions" passHref={true}>
+                                        <li>Impressions</li>
                                     </Link>
-                                    <Link href="/" passHref={true}>
-                                        <li>Ipsum</li>
+                                    <Link href="/#work" passHref={true}>
+                                        <li>Work</li>
                                     </Link>
-                                    <Link href="/" passHref={true}>
-                                        <li>Dolor</li>
+                                    <Link href="/#techstack" passHref={true}>
+                                        <li>Tech Stack</li>
                                     </Link>
                                 </ul>
                             </nav>
@@ -119,10 +119,10 @@ export default function Header() {
                         {/*</Link>*/}
                     </div>
                     <nav className={styles.navigation}>
-                        <div className={styles.microcopy}>Lorem Ipsum?</div>
+                        <div className={styles.microcopy}>Want to see whats under the hood?</div>
                         <div className={styles.externalWrapper}>
-                            <Link href="/" passHref={true}>
-                                <div className={styles.external}>Ipsum</div>
+                            <Link href="/#techstack" passHref={true}>
+                                <div className={styles.external}>Tech Stack</div>
                             </Link>
                         </div>
                     </nav>

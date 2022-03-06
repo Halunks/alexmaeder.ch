@@ -18,6 +18,13 @@
     z-index: 1;
 }
 
+.preTitle {
+    font-size: var(--font-size-lower-title);
+    color: var(--color-accent-two);
+    font-family: var(--font-family-two);
+    align-self: center;
+}
+
 .title {
     font-size: var(--font-size-upper-title);
     font-weight: var(--font-weight-upper-title);
@@ -60,7 +67,7 @@
     align-items: center;
     justify-content: center;
     display: flex;
-    padding-top: 68px;
+    padding-top: 100px;
 }
 
 .buttonGitWrapper {

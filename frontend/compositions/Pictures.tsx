@@ -1,10 +1,10 @@
 import styles from './Pictures.module.css'
-import Link from 'next/link'
-import {BsArrowUpRight, BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
+import {BsArrowDown, BsFillArrowLeftCircleFill, BsFillArrowRightCircleFill} from "react-icons/bs";
 import useEmblaCarousel from "embla-carousel-react";
 import React, {FC, useCallback, useEffect, useState} from "react";
 import Card from "../components/Card";
 import profilePic from '../public/images/alex-maeder.jpg'
+import Link from 'next/link'
 
 const Pictures: FC = () => {
     const [emblaRef, emblaApi] = useEmblaCarousel({loop: false})
@@ -43,22 +43,11 @@ const Pictures: FC = () => {
     const isMobile = windowDimension <= 800;
 
     return (
-        <section className={styles.section}>
+        <section id="impressions" className={styles.section}>
             <div className={styles.titleContainer}>
                 <h2 className={styles.title}>
-                    Lorem
+                    Impressions
                 </h2>
-                <Link href="/" passHref={true}>
-                    <div className={styles.linkWrapperWrapper}>
-
-                        <div className={styles.linkWrapper}>
-                            <div className={styles.link}>Ipsum Dolor</div>
-                            <div className={styles.icon}>
-                                <BsArrowUpRight/>
-                            </div>
-                        </div>
-                    </div>
-                </Link>
             </div>
             <div className={styles.embla} ref={emblaRef}>
                 <div className={styles.emblaContainer}>
@@ -114,6 +103,16 @@ const Pictures: FC = () => {
                     <button className={styles.umblaNext} onClick={scrollNext}><BsFillArrowRightCircleFill/></button>
                 </div>
             </div>
+            <Link href="/#work" passHref={true}>
+                <div className={styles.linkWrapperWrapper}>
+                    <div className={styles.linkWrapper}>
+                        <div className={styles.link}>Work</div>
+                        <div className={styles.icon}>
+                            <BsArrowDown/>
+                        </div>
+                    </div>
+                </div>
+            </Link>
         </section>
     )
 }
