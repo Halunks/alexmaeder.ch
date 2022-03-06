@@ -15,9 +15,9 @@ const Home: NextPage = () => {
                 <title>Lorem</title>
                 <meta name="description" content="A web app about me built with Next.js"/>
             </Head>
+            <div className={styles.noise}>
+            </div>
             <main className={styles.main}>
-                <div className={styles.noise}>
-                </div>
                 {/*<Banner/>*/}
                 <Header/>
                 <Hero/>
