@@ -53,7 +53,7 @@
 }
 
 .contentWrapper > svg:hover {
-    color: var(--color-background-dark);
+    color: var(--color-accent-two);
 }
 
 .contentWrapperSocials {

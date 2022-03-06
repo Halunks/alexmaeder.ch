@@ -16,11 +16,23 @@
     top: 0;
     right: 0;
     bottom: 0;
-    height: 930vh;
+    height: 910vh;
     width: 100%;
     background-repeat: repeat;
     z-index: 2;
     pointer-events: none;
+}
+
+@media only screen and (max-width: 360px) {
+    .noise {
+        height: 820vh;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .noise {
+        height: 920vh;
+    }
 }
 
 .main {
