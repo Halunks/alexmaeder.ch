@@ -5,8 +5,9 @@ import Link from 'next/link'
 export default function Techstack() {
 
     return (
-        <section className={styles.section}>
+        <section id="techstack" className={styles.section}>
             <div className={styles.titleWrapper}>
+                {/*<h3 className={styles.preTitle}>Project</h3>*/}
                 <h2 className={styles.title}>
                     Tech Stack
                 </h2>
@@ -24,10 +25,12 @@ export default function Techstack() {
                     <Link href={"https://vercel.com/"}><SiVercel/></Link>
                 </div>
                 <div className={styles.contentWrapperSocials}>
-                    <div className={styles.buttonPreText}>Check out my other projects</div>
-                    <div className={styles.buttonGitWrapper}>
-                        <div className={styles.buttonGit}>GitHub<SiGithub/></div>
-                    </div>
+                    <div className={styles.buttonPreText}>Down a technical rabbit hole?</div>
+                    <Link href={"https://github.com/halunks"}>
+                        <div className={styles.buttonGitWrapper}>
+                            <div className={styles.buttonGit}>GitHub<SiGithub/></div>
+                        </div>
+                    </Link>
                 </div>
             </div>
         </section>

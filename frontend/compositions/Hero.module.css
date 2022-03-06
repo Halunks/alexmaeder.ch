@@ -7,6 +7,7 @@
     z-index: 10;
     min-height: 90vh;
     height: 100%;
+    width: 100%;
 }
 
 .preTitle {
@@ -22,34 +23,45 @@
     text-align: center;
     line-height: 1;
     font-weight: var(--font-weight-upper-title);
-    word-break: break-word;
 }
 
 .buttonHeroWrapper {
     border-radius: var(--border-radius-button);
     box-shadow: inset 0 0 0 2px var(--color-button-dark);
     margin-top: 60px;
-
+    z-index: 20;
 }
 
-.buttonHero {
+.buttonWrapper {
     background-color: var(--color-button-dark);
     border-radius: var(--border-radius-button);
-    padding: 12px 50px;
     color: var(--color-text-lighter);
     align-self: center;
     position: relative;
     -webkit-transform: translate(4px, -4px);
     -ms-transform: translate(4px, -4px);
     transform: translate(4px, -4px);
-
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    align-items: center;
     webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1), -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
-
 }
 
-.buttonHero:active:hover {
+.buttonHero {
+    padding: 12px 30px 12px 50px;
+}
+
+.iconWrapper {
+    padding-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buttonWrapper:active:hover {
     -webkit-transform: translate(0px, -0px);
     -ms-transform: translate(0px, -0px);
     transform: translate(0px, -0px);
