@@ -47,7 +47,7 @@ export default function Footer() {
                 <Link href={"mailto:alex_maeder@bluewin.ch"} passHref={true}><IoMdSend/></Link>
             </div>
             <div className={styles.credentialsContainer}>
-                <div>© 2022 Lorem Ipsum, Inc.</div>
+                <div>© 2022 Alex Mäder</div>
             </div>
         </footer>
     )

@@ -1,5 +1,5 @@
 .section {
-    padding-top: 120px;
+    padding-top: 80px;
     position: relative;
     /*padding-bottom: 120px;*/
     color: var(--color-text-darkest);
@@ -28,14 +28,13 @@
 
 .title {
     word-break: break-word;
-    margin-bottom: 1em;
     font-size: var(--font-size-upper-title);
     font-weight: var(--font-weight-upper-title);
 }
 
 .storySection {
     padding-top: 0;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
 }
 
 .storyGrid {
@@ -424,5 +423,9 @@
     .stickyNavLink:hover {
         background-color: var(--color-button-bright);
         color: var(--color-button-dark);
+    }
+
+    .title {
+        margin-bottom: 1em;
     }
 }

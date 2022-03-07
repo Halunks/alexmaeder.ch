@@ -80,13 +80,12 @@
 
 .embla {
     overflow: hidden;
-    margin-bottom: 48px;
+    /*margin-bottom: 48px;*/
 }
 
 .slideBtnWrapper {
     color: var(--color-text-lighter);
     font-size: 60px;
-    margin-bottom: 64px;
     display: flex;
     align-self: center;
     justify-content: center;
