@@ -25,7 +25,7 @@ export default function Techstack() {
                     <Link href={"https://vercel.com/"}><SiVercel/></Link>
                 </div>
                 <div className={styles.contentWrapperSocials}>
-                    <div className={styles.buttonPreText}>Down a technical rabbit hole?</div>
+                    <div className={styles.buttonPreText}>Down the technical rabbit hole?</div>
                     <Link href={"https://github.com/halunks"}>
                         <div className={styles.buttonGitWrapper}>
                             <div className={styles.buttonGit}>GitHub<SiGithub/></div>

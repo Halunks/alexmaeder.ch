@@ -1,7 +1,7 @@
 .section {
     padding-top: 120px;
     position: relative;
-    padding-bottom: 120px;
+    /*padding-bottom: 120px;*/
     color: var(--color-text-darkest);
     max-width: 100%;
 }
