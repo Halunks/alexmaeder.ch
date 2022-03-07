@@ -6,11 +6,11 @@ export default function Hero() {
     return (
         <section className={styles.section}>
             {/*<p className={styles.preTitle}>An addition of my portfolio</p>*/}
-            <h1 className={styles.titleHero}>Let me introduce <span>myself</span></h1>
-            <Link href="/#impressions">
+            <h1 className={styles.titleHero}>I love <span>creating</span> and building websites.</h1>
+            <Link href="/#about">
                 <div className={styles.buttonHeroWrapper}>
                     <div className={styles.buttonWrapper}>
-                        <div className={styles.buttonHero}>Impressions</div>
+                        <div className={styles.buttonHero}>Get to know me</div>
                         <div className={styles.iconWrapper}>
                             <BsArrowDown/>
                         </div>

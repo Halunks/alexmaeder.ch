@@ -72,8 +72,8 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <ul className={styles.navMobileList}>
-                                    <Link href="/#impressions" passHref={true}>
-                                        <li>Impressions</li>
+                                    <Link href="/#about" passHref={true}>
+                                        <li>About</li>
                                     </Link>
                                     <Link href="/#work" passHref={true}>
                                         <li>Work</li>
@@ -119,7 +119,7 @@ export default function Header() {
                         {/*</Link>*/}
                     </div>
                     <nav className={styles.navigation}>
-                        <div className={styles.microcopy}>Want to see whats under the hood?</div>
+                        <div className={styles.microcopy}>Want to know what&apos;s under the hood?</div>
                         <div className={styles.externalWrapper}>
                             <Link href="/#techstack" passHref={true}>
                                 <div className={styles.external}>Tech Stack</div>
