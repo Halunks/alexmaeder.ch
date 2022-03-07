@@ -79,7 +79,7 @@ export default function Story() {
         <section id="work" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.titleWrapper}>
-                    <h2 className={styles.title}><span>Lorem Ipsum</span><br/> Dolor Lorem Ipsum?</h2>
+                    <h2 className={styles.title}><span>Design</span> Principles.</h2>
                 </div>
                 <div className={styles.storySection}>
                     <div className={styles.storyGrid}>
@@ -89,7 +89,7 @@ export default function Story() {
                                     <Link href="#one" passHref={true}>
                                         <div
                                             className={whoIsActive === 1 ? `${styles.stickyNavLinkActive}` : `${styles.stickyNavLink}`}
-                                        >Act I
+                                        >Nr. I
                                         </div>
                                     </Link>
                                     <Link href="#two" passHref={true}>
@@ -122,10 +122,9 @@ export default function Story() {
                                  className={styles.contentBlock}>
                                 <h3
                                     ref={refOne}
-                                    className={styles.contentTitle}>Ipsum Lorem</h3>
-                                <p className={styles.contentParagraph}>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
-                                    sit amet, consectetur adipisicing elit. Cupiditate, quam!</p>
+                                    className={styles.contentTitle}>Harmony</h3>
+                                <p className={styles.contentParagraph}>Use colors, shapes and visuals that match the
+                                    purpose of the website and are consistent. </p>
                             </div>
                             {isMobile ? (
                                 <div id="two" className={styles.mobileImageWrapperTwo}>

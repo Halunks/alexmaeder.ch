@@ -6,7 +6,7 @@ import Card from "../components/Card";
 import profile from '../public/images/alex-maeder.jpg'
 import yellowstone from '../public/images/yellowstone.png'
 import rapperswil from '../public/images/rapperswil.jpg'
-import work from '../public/images/work.jpg'
+import developer from '../public/images/work.png'
 import dnd from '../public/images/dnd.jpg'
 import mountains from '../public/images/mountains.jpg'
 
@@ -66,21 +66,21 @@ const Pictures: FC = () => {
                         cardPic={yellowstone}
                         cardAltText={"Alex making scrambled eggs"}
                         cardTitle={"Eggs."}
-                        cardDesc={"That's me preparing scrambled eggs in Yellowstone Park in 2016. Not far from here, I was born a triplet in Denver, Colorado in 1993! There were three eggs, so I have two wonderful sisters."}
+                        cardDesc={"That's me preparing scrambled eggs in Yellowstone Park in 2016. Not far from here, I was born a triplet in Denver, Colorado in 1993! There were three single eggs, so I have two wonderful sisters."}
                         cardStyle={{backgroundImage: "linear-gradient(220deg, #0a047a, #ff80ed)"}}
                     />
                     <Card
                         cardPic={rapperswil}
                         cardAltText={"Castle of Rapperswil"}
                         cardTitle={"Heimat."}
-                        cardDesc={"The hatched eggs did not stay long in the US. We moved in 2006 to Rapperswil-Jona, the most beautiful town at the lake of Zurich. I studied there industrial engineering and still live here today. Love it."}
+                        cardDesc={"The hatched eggs did not stay long in the USA. We moved to Rapperswil-Jona, the most beautiful city on Lake Zurich, in 2006. I studied industrial engineering there and still live here today and love it."}
                         cardStyle={{backgroundImage: "linear-gradient(220deg, #0a047a, #427aff)"}}
                     />
                     <Card
-                        cardPic={work}
+                        cardPic={developer}
                         cardAltText={"Alex Mäder holding a card"}
                         cardTitle={"Work."}
-                        cardDesc={"I successfully transitioned from working in product management to web development, largely thanks to an intensive full stack course in Zurich in 2020."}
+                        cardDesc={"In 2020 I successfully transitioned from product management to web development, largely thanks to an intensive full-stack course in Zurich. Now I design and develop websites professionally."}
                         cardStyle={{backgroundImage: "linear-gradient(220deg, #fec810, #ff80ed)"}}
                     />
                     <Card
@@ -94,7 +94,7 @@ const Pictures: FC = () => {
                         cardPic={mountains}
                         cardAltText={"Max Muster"}
                         cardTitle={"Balance."}
-                        cardDesc={"For me it is important to have a good work-life balance, and for that I like to watch movies, play games, read, meet friends and climb mountains."}
+                        cardDesc={"For me it is important to have a good work-life balance, and for that I like to watch movies, play video games, read, meet friends and go for walks."}
                         cardStyle={{backgroundImage: "linear-gradient(220deg, #ff80ed, #fec810)"}}
                     />
                 </div>

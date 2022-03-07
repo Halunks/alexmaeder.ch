@@ -9,7 +9,7 @@ export default function Techstack() {
             <div className={styles.titleWrapper}>
                 {/*<h3 className={styles.preTitle}>Project</h3>*/}
                 <h2 className={styles.title}>
-                    Tech Stack
+                    Tech Stack.
                 </h2>
             </div>
             <div className={styles.contentContainer}>

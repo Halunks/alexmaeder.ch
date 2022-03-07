@@ -194,6 +194,14 @@
     font-weight: var(--font-weight-upper-title);
 }
 
+.socialsContainer {
+    font-size: 4rem;
+}
+
+.socialsContainer > svg {
+    margin: 8px;
+}
+
 .logoWrapper {
     display: flex;
     flex-direction: row;
