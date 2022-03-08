@@ -62,7 +62,7 @@
 
     --font-weight-upper-title: bolder;
 
-    --border-radius-button: 30px;
+    --border-radius-button: 2px;
 
     --padding-desktop: 60px;
     --padding-mobile: 28px;
@@ -101,4 +101,5 @@ span {
     font-family: var(--font-family-two);
     color: var(--color-text-darkest);
     font-weight: 500;
+    line-height: 1rem;
 }
