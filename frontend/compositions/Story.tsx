@@ -54,32 +54,37 @@ export default function Story() {
         if (inViewportFour) {
             setWhoIsActive(4);
         }
+    }, [inViewportOne, inViewportTwo, inViewportThree, inViewportFour]);
 
+    useEffect(() => {
         switch (whoIsActive) {
             case 1:
                 setBackgroundImg(defaultImageOne);
-                return setBackgroundCol({backgroundColor: "#0a047a"});
+                setBackgroundCol({backgroundColor: "#0a047a"});
+                break;
             case 2:
                 setBackgroundImg(defaultImageTwo);
-                return setBackgroundCol({backgroundColor: "#ff80ed"});
+                setBackgroundCol({backgroundColor: "#ff80ed"});
+                break;
             case 3:
                 setBackgroundImg(defaultImageThree);
-                return setBackgroundCol({backgroundColor: "#fec810"});
+                setBackgroundCol({backgroundColor: "#fec810"});
+                break;
             case 4:
                 setBackgroundImg(defaultImageFour);
-                return setBackgroundCol({backgroundColor: "#2b6aff"});
+                setBackgroundCol({backgroundColor: "#2b6aff"});
+                break;
             default:
                 setBackgroundImg(defaultImageOne)
-                return setBackgroundCol({backgroundColor: "#0a047a"})
-
+                setBackgroundCol({backgroundColor: "#0a047a"})
         }
-    }, [inViewportOne, inViewportTwo, inViewportThree, inViewportFour]);
+    }, [whoIsActive])
 
     return (
         <section id="work" className={styles.section}>
             <div className={styles.container}>
                 <div className={styles.titleWrapper}>
-                    <h2 className={styles.title}><span>Design</span> Principles.</h2>
+                    <h2 className={styles.title}>My <span>Design</span> Principles</h2>
                 </div>
                 <div className={styles.storySection}>
                     <div className={styles.storyGrid}>
@@ -122,9 +127,14 @@ export default function Story() {
                                  className={styles.contentBlock}>
                                 <h3
                                     ref={refOne}
-                                    className={styles.contentTitle}>Harmony</h3>
-                                <p className={styles.contentParagraph}>Use colors, shapes and visuals that match the
-                                    purpose of the website and are consistent. </p>
+                                    className={styles.contentTitle}>Recycling</h3>
+                                <p className={styles.contentParagraph}>By reusing established material, I already have a
+                                    proof of concept. For example, the design of this website is inspired by the
+                                    style
+                                    of the <Link href={"https://en.wikipedia.org/wiki/Memphis_Group"}
+                                                 passHref={true}><span
+                                        className={styles.link}>Memphis Group</span></Link> from the 1980s.
+                                </p>
                             </div>
                             {isMobile ? (
                                 <div id="two" className={styles.mobileImageWrapperTwo}>
@@ -135,10 +145,13 @@ export default function Story() {
                                  className={styles.contentBlock}>
                                 <h3
                                     ref={refTwo}
-                                    className={styles.contentTitle}>Ipsum Lorem</h3>
-                                <p className={styles.contentParagraph}>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
-                                    sit amet, consectetur adipisicing elit. Alias, atque.</p>
+                                    className={styles.contentTitle}>Usability</h3>
+                                <p className={styles.contentParagraph}>I have open eyes and ears when it comes to new
+                                    insights about humans interacting on a screen. For example, after the <span>Zeigarnik
+                                        effect</span> you can remember best unfin<br/><br/>Read more <span
+                                        className={styles.link}><Link href={"https://lawsofux.com/zeigarnik-effect/"}
+                                                                      passHref={true}>lawsofux.com</Link></span>
+                                </p>
                             </div>
                             {isMobile ? (
                                 <div id="three" className={styles.mobileImageWrapperThree}>
@@ -149,11 +162,9 @@ export default function Story() {
                                  className={styles.contentBlock}>
                                 <h3
                                     ref={refThree}
-                                    className={styles.contentTitle}>Ipsum Lorem</h3>
-                                <p className={styles.contentParagraph}>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
-                                    sit amet, consectetur adipisicing elit. Eos itaque neque officiis quidem rerum
-                                    temporibus?</p>
+                                    className={styles.contentTitle}>Simplicity</h3>
+                                <p className={styles.contentParagraph}>Minimalistic design is easier to navigate, loads
+                                    faster and is better scannable.</p>
                             </div>
                             {isMobile ? (
                                 <div id="four" className={styles.mobileImageWrapperFour}>
@@ -164,10 +175,10 @@ export default function Story() {
                                  className={styles.contentBlock}>
                                 <h3
                                     ref={refFour}
-                                    className={styles.contentTitle}>Ipsum Lorem</h3>
-                                <p className={styles.contentParagraph}>Lorem ipsum dolor sit amet, consectetur
-                                    adipisicing elit. Ad aliquam animi explicabo, facilis quos vel! Lorem ipsum dolor
-                                    sit amet.</p>
+                                    className={styles.contentTitle}>Fun</h3>
+                                <p className={styles.contentParagraph}>I enjoy creating a website, and I hope that is
+                                    reflected in the design. I build the user a playground where they can click buttons,
+                                    zoom around, and explore.</p>
                             </div>
                         </div>
                         {isMobile ? null : (

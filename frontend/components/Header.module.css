@@ -34,7 +34,7 @@
 }
 
 .nametagDesktop {
-    font-weight: 600;
+    font-weight: 400;
     font-size: 25px;
     margin-left: 18px;
     color: var(--color-text-darkest);
@@ -140,7 +140,7 @@
 }
 
 .nametagMobile {
-    font-weight: 600;
+    font-weight: 400;
     padding-top: 4px;
     font-size: 25px;
     margin-left: 18px;
@@ -220,7 +220,7 @@
 
 .nametagMobileExpand {
     color: var(--color-text-lighter);
-    font-weight: 600;
+    font-weight: 400;
     padding-top: 4px;
     font-size: 25px;
     margin-left: 18px;

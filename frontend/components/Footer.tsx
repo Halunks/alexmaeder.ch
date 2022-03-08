@@ -8,7 +8,7 @@ import {IoMdSend} from "react-icons/io";
 export default function Footer() {
 
     return (
-        <footer className={styles.footerContainer}>
+        <footer id="end" className={styles.footerContainer}>
             <Link href={"/"} passHref={true}>
                 <div className={styles.buttonWrapper}>
                     <div className={styles.buttonTop}>
@@ -29,13 +29,13 @@ export default function Footer() {
                 </Link>
             </div>
             <div className={styles.linkContainer}>
-                <Link href={"/"} passHref={true}>
+                <Link href={"/#end"} passHref={true}>
                     <div>Privacy</div>
                 </Link>
-                <Link href={"/"} passHref={true}>
+                <Link href={"/#end"} passHref={true}>
                     <div>Terms</div>
                 </Link>
-                <Link href={"/"} passHref={true}>
+                <Link href={"/#end"} passHref={true}>
                     <div>About</div>
                 </Link>
             </div>
@@ -47,7 +47,7 @@ export default function Footer() {
                 <Link href={"mailto:alex_maeder@bluewin.ch"} passHref={true}><IoMdSend/></Link>
             </div>
             <div className={styles.credentialsContainer}>
-                <div>© 2022 Alex Mäder</div>
+                <div>© Alex Mäder 2022</div>
             </div>
         </footer>
     )

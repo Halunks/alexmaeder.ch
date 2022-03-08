@@ -91,12 +91,20 @@
     justify-content: center;
 }
 
+.umblaPrev {
+    box-shadow: inset 0 0 0 2px var(--color-button-bright);
+}
+
+.umblaNext {
+    box-shadow: inset 0 0 0 2px var(--color-button-bright);
+}
+
 .slideButtons {
     margin: 16px;
     display: flex;
     align-self: center;
     justify-content: center;
-    border-radius: 30px;
+    border-radius: var(--border-radius-button);
     box-shadow: inset 0 0 0 2px var(--color-button-bright);
     -webkit-transition: -webkit-transform .2s cubic-bezier(.165, .84, .44, 1);
     transition: transform .2s cubic-bezier(.165, .84, .44, 1);

@@ -7,6 +7,7 @@
     align-self: stretch;
     flex-direction: row;
     max-width: 380px;
+    min-width: 20vw;
 }
 
 .card {
@@ -91,6 +92,7 @@
 
 .cardDescription {
     font-size: var(--font-size-paragraph);
+    line-height: 1.2;
 }
 
 @media only screen and (max-width: 1000px) {

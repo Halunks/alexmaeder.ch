@@ -27,6 +27,7 @@ const Card: FC<cardProps> = ({cardStyle, cardDesc, cardTitle, cardPic, cardAltTe
                             className={styles.cardImage}
                             src={cardPic}
                             alt={cardAltText}
+                            placeholder={"blur"}
                         />
                     </div>
                 </div>
