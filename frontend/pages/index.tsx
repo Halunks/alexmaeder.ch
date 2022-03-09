@@ -12,8 +12,8 @@ const Home: NextPage = () => {
     return (
         <div className={styles.container}>
             <Head>
-                <title>Lorem</title>
-                <meta name="description" content="A web app about me built with Next.js"/>
+                <title>alex maeder</title>
+                <meta name="description" content="A web app created with Next.js about me"/>
             </Head>
             <div className={styles.noise}>
             </div>
