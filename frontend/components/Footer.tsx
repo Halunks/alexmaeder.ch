@@ -2,7 +2,6 @@ import styles from './Footer.module.css'
 import Link from "next/link";
 import Image from "next/image";
 import {BsArrowUp, BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs";
-import {IoLocationSharp} from "react-icons/io5";
 import {IoMdSend} from "react-icons/io";
 
 export default function Footer() {
@@ -43,7 +42,6 @@ export default function Footer() {
                 <Link href={"https://www.linkedin.com/in/alexemanuelmaeder/"} passHref={true}><BsLinkedin/></Link>
                 <Link href={"https://github.com/halunks"} passHref={true}><BsGithub/></Link>
                 <Link href={"https://instagram.com/evenmader"} passHref={true}><BsInstagram/></Link>
-                <Link href={"https://goo.gl/maps/VUN4uwY8Qrw2qfwf7"} passHref={true}><IoLocationSharp/></Link>
                 <Link href={"mailto:alex_maeder@bluewin.ch"} passHref={true}><IoMdSend/></Link>
             </div>
             <div className={styles.credentialsContainer}>
