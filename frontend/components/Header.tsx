@@ -2,10 +2,11 @@ import styles from './Header.module.css'
 import Image from "next/image";
 import Link from 'next/link'
 import {Fragment, useEffect, useState} from "react";
-import {RiMenuFoldLine, RiMenuUnfoldLine} from "react-icons/ri";
+import {RiMenuFoldLine, RiMenuUnfoldLine, RiStackFill} from "react-icons/ri";
 import {BsGithub, BsInstagram, BsLinkedin} from "react-icons/bs";
-import {IoLocationSharp} from "react-icons/io5";
 import {IoMdSend} from "react-icons/io";
+import {AiOutlineSmile} from "react-icons/ai";
+import {MdFormatPaint} from "react-icons/md";
 
 
 export default function Header() {
@@ -75,14 +76,20 @@ export default function Header() {
                                     </div>
                                 </div>
                                 <ul className={styles.navMobileList}>
-                                    <Link href="/#about" passHref={true}>
-                                        <li>About me</li>
+                                    <Link href={"/#about"} passHref={true}>
+                                        <div className={styles.buttonWrapper}>
+                                            <div className={styles.buttonContent}>About me<AiOutlineSmile/></div>
+                                        </div>
                                     </Link>
-                                    <Link href="/#work" passHref={true}>
-                                        <li>My Design</li>
+                                    <Link href={"/#work"} passHref={true}>
+                                        <div className={styles.buttonWrapper}>
+                                            <div className={styles.buttonContent}>My Design<MdFormatPaint/></div>
+                                        </div>
                                     </Link>
-                                    <Link href="/#techstack" passHref={true}>
-                                        <li>Tech Stack</li>
+                                    <Link href={"/#techstack"} passHref={true}>
+                                        <div className={styles.buttonWrapper}>
+                                            <div className={styles.buttonContent}>Tech Stack<RiStackFill/></div>
+                                        </div>
                                     </Link>
                                 </ul>
                                 <div className={styles.socialsContainer}>
@@ -90,8 +97,6 @@ export default function Header() {
                                           passHref={true}><BsLinkedin/></Link>
                                     <Link href={"https://github.com/halunks"} passHref={true}><BsGithub/></Link>
                                     <Link href={"https://instagram.com/evenmader"} passHref={true}><BsInstagram/></Link>
-                                    <Link href={"https://goo.gl/maps/VUN4uwY8Qrw2qfwf7"}
-                                          passHref={true}><IoLocationSharp/></Link>
                                     <Link href={"mailto:alex_maeder@bluewin.ch"} passHref={true}><IoMdSend/></Link>
                                 </div>
                             </nav>
