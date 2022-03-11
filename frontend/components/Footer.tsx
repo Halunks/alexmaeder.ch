@@ -39,7 +39,8 @@ export default function Footer() {
                 </Link>
             </div>
             <div className={styles.socialsContainer}>
-                <Link href={"https://www.linkedin.com/in/alexemanuelmaeder/"} passHref={true}><BsLinkedin/></Link>
+                <Link href={"https://www.linkedin.com/in/alexemanuelmaeder/"}
+                      passHref={true}><BsLinkedin/></Link>
                 <Link href={"https://github.com/halunks"} passHref={true}><BsGithub/></Link>
                 <Link href={"https://instagram.com/evenmader"} passHref={true}><BsInstagram/></Link>
                 <Link href={"mailto:alex_maeder@bluewin.ch"} passHref={true}><IoMdSend/></Link>
